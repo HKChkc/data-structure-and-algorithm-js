@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script src="./deque.js"></script>
+<script>
+  function palindromeCheck(str) {
+    if (str === undefined || str === null(str !== null && str.length === 0)) {
+      return false;
+    }
+    const dequeue = new Dequeue();
+    const lowerStr = str.toLocaleLowerCase.split(' ').join('');
+    let isEqual = true;
+    let firstChar, secondChar;
+    while (dequeue.size() > 1 && isEqual) {
+      firstChar = dequeue.removeFront();
+      secondChar = dequeue.removeBack();
+      if (firstChar !== secondChar) {
+        isEqual = false;
+      }
+    }
+    return isEqual;
+  }
+</script>
